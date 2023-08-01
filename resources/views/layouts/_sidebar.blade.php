@@ -26,10 +26,10 @@
       <div id="collapseMaster" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
           <h6 class="collapse-header">Master</h6>
-          <a class="collapse-item" href="">Vendor Teknik</a>
-          <a class="collapse-item" href="">Vendor Tibet</a>
-          <a class="collapse-item" href="">Nomor SPBJ</a>
-          <a class="collapse-item" href="">Nomor PK</a>
+          <a class="collapse-item" href="{{ route('vendor-teknik.index') }}">Vendor Teknik</a>
+          <a class="collapse-item" href="{{ route('vendor-tibet.index') }}">Vendor Tibet</a>
+          <a class="collapse-item" href="{{ route('nomor-spbj.index') }}">Nomor SPBJ</a>
+          <a class="collapse-item" href="{{ route('nomor-pk.index') }}">Nomor PK</a>
         </div>
       </div>
     </li>
