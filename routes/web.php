@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\PelayananController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,4 +15,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// DASHBOARD
 Route::get('/', [DashboardController::class, 'index']);
+
+// PELAYANAN
+Route::get('/pelayanan', [PelayananController::class, 'index'])->name('pelayanan.index');
+Route::get('/pelayanan/tambah', [PelayananController::class, 'create'])->name('pelayanan.create');
+Route::post('/pelayanan', [PelayananController::class,'store'])->name('pelayanan.store');

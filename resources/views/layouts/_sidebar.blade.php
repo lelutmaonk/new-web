@@ -44,7 +44,7 @@
       <div id="collapseMenu" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
           <h6 class="collapse-header">Menu</h6>
-          <a class="collapse-item" href="">Pelayanan</a>
+          <a class="collapse-item" href="{{ route('pelayanan.index') }}">Pelayanan</a>
           <a class="collapse-item" href="">Aruna</a>
           <a class="collapse-item" href="">Teknik</a>
           <a class="collapse-item" href="">Tibet</a>
