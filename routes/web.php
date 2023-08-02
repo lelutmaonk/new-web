@@ -26,6 +26,10 @@ Route::get('/', [DashboardController::class, 'index']);
 Route::get('/pelayanan', [PelayananController::class, 'index'])->name('pelayanan.index');
 Route::get('/pelayanan/tambah', [PelayananController::class, 'create'])->name('pelayanan.create');
 Route::post('/pelayanan', [PelayananController::class,'store'])->name('pelayanan.store');
+Route::get('/pelayanan/ubah/{pelayanan:pelayanan_id}', [PelayananController::class, 'edit'])->name('pelayanan.edit');
+Route::put('/pelayanan/{pelayanan:pelayanan_id}', [PelayananController::class, 'update'])->name('pelayanan.update');
+Route::delete('/pelayanan/{pelayanan:pelayanan_id}', [PelayananController::class, 'destroy'])->name('pelayanan.destroy');
+
 
 // VENDOR TEKNIK
 Route::get('/vendor-teknik', [VendorTeknikController::class, 'index'])->name('vendor-teknik.index');

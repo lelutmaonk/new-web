@@ -26,6 +26,7 @@ class CreatePelayananTable extends Migration
             $table->text('keterangan')->nullable();
             // 
             $table->date('tanggal_pembayaran')->nullable();
+            $table->date('tanggal_peremajaan')->nullable();
             $table->string('cluster')->nullable();
             $table->date('tanggal_permintaan_teknik')->nullable();
             $table->text('file_surat_clusterisasi')->nullable();

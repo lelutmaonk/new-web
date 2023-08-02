@@ -10,6 +10,18 @@
                     </div>
                     <a href="{{ route('pelayanan.create') }}" class="btn btn-sm btn-outline-success">Tambah {{ $title }} </a>
                 </div>
+
+                {{-- message success --}}
+                @if (session('success'))
+                    <div class="alert alert-success alert-dismissible ml-2 mr-2" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h6><i class="fas fa-check"></i><b> Success!</b></h6>
+                        {{ session('success') }}
+                    </div>
+                @endif
+
                 <div class="table-responsive">
                     <table class="table align-items-center table-flush">
                     <thead class="thead-light">
@@ -30,8 +42,14 @@
                             <td>{{ $item->daya_permohonan }}</td>
                             <td>
                                 <a href="" class="btn btn-sm btn-success"><i class="fa fa-eye" aria-hidden="true"></i></a>
-                                <a href="" class="btn btn-sm btn-warning"><i class="fa fa-edit" aria-hidden="true"></i></a>
-                                <a href="" class="btn btn-sm btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                                <a href="{{ route('pelayanan.edit', ['pelayanan' => $item->pelayanan_id]) }}" class="btn btn-sm btn-warning"><i class="fa fa-edit" aria-hidden="true"></i></a>
+                                <form method="POST" action="{{ route('pelayanan.destroy', ['pelayanan' => $item->pelayanan_id]) }}" class="d-inline">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-sm btn-danger">
+                                        <i class="fa fa-trash"></i>
+                                    </button>
+                                </form>
                             </td>
                         </tr>
                     @empty

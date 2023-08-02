@@ -24,6 +24,7 @@ class PelayananModel extends Model
         'tanggal_pembayaran',
         'cluster',
         'tanggal_permintaan_teknik',
+        'tanggal_peremajaan',
         'file_surat_clusterisasi',
         'file_surat_izin_tiang',
         'file_sph',
